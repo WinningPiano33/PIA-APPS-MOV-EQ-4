@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-button>
+    <ion-title>CUPONES</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="qr-code-outline" slot="start"></ion-icon>
+      <ion-label>$200 DE DESCUENTO</ion-label>
+      <ion-button fill="outline" slot="end" (click)="presentAlert()">Ver Cupon</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      En la compra de un minimo de $1000 aplica este cupon y 
+      se te hara un descuento de $200.
+    </ion-card-content>
+  </ion-card>
+</ion-content>
