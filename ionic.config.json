@@ -1,7 +1,8 @@
 {
   "name": "PIA aplicaciones moviles",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

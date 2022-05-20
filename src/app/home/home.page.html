@@ -39,7 +39,7 @@
       <ion-text class= "ion-text-center" color="primary">
         <h1>BIENVENIDOS A MI APLICACION DE GRANAJA</h1>
       </ion-text>
- 
+
         <ion-card>
           <img src="https://www.informador.mx/__export/1506058641276/sites/elinformador/img/historico/10/959641.jpg_788543494.jpg" />
           <ion-card-header>
@@ -53,6 +53,20 @@ En la parte superor izquierda podran ver unas lineas, si presionan ese icono les
 Espero que sea de su agrado la aplicacion y si tienen alguna duda pueden buscarme en la seccion de informacion
           </ion-card-content>
         </ion-card>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12" class="ion-text-center">
+              <!-- Texto que indica el estado actual -->
+              <ion-text>{{active ? 'La linterna esta encendida' : 'La linterna esta apagada'}}</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" class="ion-text-center">
+              <!-- Toggle para cambiar el flash -->
+              <ion-toggle [checked]="active" (ionChange)="flash()"></ion-toggle>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
         <ion-card>
           <img src="/assets/granjero.png" />
           <ion-card-header>
@@ -67,12 +81,6 @@ Espero que sea de su agrado la aplicacion y si tienen alguna duda pueden buscarm
       Menciona Eduardo que fue creciendo en el ceno de esa gran familia, que tenía esa gran vocación de amar la tierra; esa tierra que les daba el sustento diario, sembrando tomate, lechuga, pepino, manzana, naranjas y otras cosas que recuerda
           </ion-card-content>
         </ion-card>
-
-      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button>
-          <ion-icon name="flashlight-outline"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
     </ion-content>
   </div>
 </ion-app>
